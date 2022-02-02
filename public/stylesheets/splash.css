@@ -1,0 +1,218 @@
+@import "style.css";
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  height: 100%;
+  background-image: url("/img/library_outside_blur.jpg");
+  background-size: cover;
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 95%;
+} 
+
+header {
+  text-align: center;
+}
+
+section p{
+  text-align: center;
+}
+
+aside {
+  position: relative;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+p{
+  font-size: 1.4em;
+}
+
+label{
+  font-size: 1.3em;
+}
+
+h1{
+  font-size: 4.5em;
+}
+
+html{
+  height: 100%;
+}
+
+section form{
+  padding: 10px 15px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+main p{
+  text-align: center;
+}
+
+form input{
+  margin: 10px 5px;
+}
+
+form select{
+  margin: 10px 5px;
+}
+
+form label{
+  color: white;
+}
+
+main section{
+  text-align: center;
+}
+
+#error-msg{
+  text-align: center;
+  color: #D8000C;
+	background-color: #FFBAB070;
+  margin-right: 15%;
+  margin-left: 15%;
+  padding: 2px 7px;
+}
+
+
+#error-msg::before{
+  content: " ! ";
+  text-align: center;
+  border: 2px solid #D8000C;
+  padding-top: 2px;
+  margin-right: 5px;
+  /*the border is a complete circle*/
+  border-radius: 100%;
+  height: 100%; 
+  width: 30px; 
+  display: inline-block;
+}
+
+#error-msg::after{
+  content: " ! ";
+  text-align: center;
+  border: 2px solid #D8000C;
+  padding-top: 2px;
+  margin-left: 5px;
+  border-radius: 100%;
+  height: 100%; 
+  width: 30px; 
+  display: inline-block;
+}
+
+@keyframes c1{
+  0%  {  background-color: #FF0000;  }
+  12% {  background-color: #FFFFFF;  }
+  25% {  background-color: #FFFFFF;  }
+  37% {  background-color: #FFFFFF;  }
+  50% {  background-color: #D000FF;  }
+  62% {  background-color: #FFFFFF;  }
+  75% {  background-color: #FFFFFF;  }
+  87% {  background-color: #FFFFFF;  }
+}
+
+#code-1{
+  animation-name: c1;
+}
+
+@keyframes c2{
+  0%  {  background-color: #FFFFFF;  }
+  12% {  background-color: #00FF00;  }
+  25% {  background-color: #FFFFFF;  }
+  37% {  background-color: #FFFFFF;  }
+  50% {  background-color: #FFFFFF;  }
+  62% {  background-color: #FF9100;  }
+  75% {  background-color: #FFFFFF;  }
+  87% {  background-color: #FFFFFF;  }
+}
+
+#code-2{
+  animation-name: c2;
+}
+
+@keyframes c3{
+  0%  {  background-color: #FFFFFF;  }
+  12% {  background-color: #FFFFFF;  }
+  25% {  background-color: #0000FF;  }
+  37% {  background-color: #FFFFFF;  }
+  50% {  background-color: #FFFFFF;  }
+  62% {  background-color: #FFFFFF;  }
+  75% {  background-color: #00FFEE;  }
+  87% {  background-color: #FFFFFF;  }
+}
+
+#code-3{
+  animation-name: c3;
+}
+
+@keyframes c4{
+  0%  {  background-color: #FFFFFF;  }
+  12% {  background-color: #FFFFFF;  }
+  25% {  background-color: #FFFFFF;  }
+  37% {  background-color: #FFFF00;  }
+  50% {  background-color: #FFFFFF;  }
+  62% {  background-color: #FFFFFF;  }
+  75% {  background-color: #FFFFFF;  }
+  87% {  background-color: #4E2E0A;  }
+}
+
+#code-4{
+  animation-name: c4;
+}
+
+#code{
+  position:absolute;
+  left: 30%;
+  bottom: 7%;
+}
+
+#stats{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 5px;
+  color: white;
+}
+
+#description{
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+  color: white;
+}
+
+a{
+  color: cyan;
+}
+
+a:active{
+  background-color: orange;
+}
+
+.code-hole{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border: 3px black solid;
+  border-radius: 100%;
+  background-color: white;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+
+aside{
+  height: 100%;
+}

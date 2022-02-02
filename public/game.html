@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>BachelorMind</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/game.css">
+        <script src="js/messages.js"></script>
+        <script src="js/game.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="title">BachelorMind</h1>
+        </header>
+        <div class="parent">
+            <aside class="left">
+                <section>
+                    <ul>
+                        <li><strong>Room:</strong> <span id="room"></span></li>
+                        <li><strong>Mode:</strong> <span id="mode"></span></li>
+                        <li><strong>Role:</strong> <span id="role"></span></li>
+                    </ul>
+                </section>
+                <button onclick="abortGame()" id="quit-button" type="button">Quit Game</button>
+            </aside>
+            <main>
+                <ul>
+                    <li id="code">
+                        <svg height="70" width="440">
+                            <circle id="code-1" cx="100" cy="35" r="30" stroke="black" stroke-width="3" fill="white"></circle>
+                            <circle id="code-2" cx="170" cy="35" r="30" stroke="black" stroke-width="3" fill="white"></circle>
+                            <circle id="code-3" cx="240" cy="35" r="30" stroke="black" stroke-width="3" fill="white"></circle>
+                            <circle id="code-4" cx="310" cy="35" r="30" stroke="black" stroke-width="3" fill="white"></circle>
+                        </svg> 
+                    </li>
+                </ul>
+            </main>
+            <aside>
+                <section id="game-state">
+                    <p>Time: <span id="time"></span></p>
+                    <p> <strong id="state">GAME STATE</strong> </p>
+                </section>
+                <section hidden id="evaluate">
+                    <p>How good is the guess?</p>
+                    <p>Red for correct color &amp; place</p>
+                    <p>Yellow for correct color only</p>
+                    <label for="red">Red: </label>
+                    <input type="text" id="red-evaluate" name="red"><br><br>
+                    <label for="yellow">Yellow: </label>
+                    <input type="text" id="yellow-evaluate" name="yellow"><br><br>
+                </section>
+                <!-- The sections color-selection or evaluation will be hidden according to the player -->
+                <section hidden id="color-selection">
+                    <p><strong>Please click on the color you want to pick</strong></p>
+                    <svg height="120" width="230">
+                        <circle onclick="setCursorColor('R')" cx="25" cy="35" r="25" stroke="black" stroke-width="3" fill="#FF0000"></circle>
+                        <circle onclick="setCursorColor('G')" cx="85" cy="35" r="25" stroke="black" stroke-width="3" fill="#00FF00"></circle>
+                        <circle onclick="setCursorColor('B')" cx="145" cy="35" r="25" stroke="black" stroke-width="3" fill="#0000FF"></circle>
+                        <circle onclick="setCursorColor('Y')" cx="205" cy="35" r="25" stroke="black" stroke-width="3" fill="#FFFF00"></circle>
+
+                        <circle onclick="setCursorColor('M')" cx="25" cy="95" r="25" stroke="black" stroke-width="3" fill="#D000FF"></circle>
+                        <circle onclick="setCursorColor('O')" cx="85" cy="95" r="25" stroke="black" stroke-width="3" fill="#FF9100"></circle>
+                        <circle onclick="setCursorColor('C')" cx="145" cy="95" r="25" stroke="black" stroke-width="3" fill="#00FFEE"></circle>
+                        <circle onclick="setCursorColor('K')" cx="205" cy="95" r="25" stroke="black" stroke-width="3" fill="#4A2E0A"></circle>
+                    </svg> 
+                </section>
+                <button onclick="makeMove()" id="action-button" class="circle-button">Play</button>
+            </aside>
+        </div>
+    </body>
+</html>

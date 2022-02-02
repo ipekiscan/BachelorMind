@@ -1,0 +1,20 @@
+@media (max-width: 750px), (max-height: 750px), (max-aspect-ratio: 1) {
+  body::before {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    content: "Your screen is too small for this game, please zoom out or switch to a bigger device.";
+    background-color: black;
+    z-index: 100;
+  }
+}
+
+html *{
+  font-family: 'Josefin Sans', sans-serif !important;
+}

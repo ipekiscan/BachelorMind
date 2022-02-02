@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>BachelorMind</title>
+        <script src="js/game.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="title">BachelorMind</h1>
+        </header>
+        <aside class="left">
+            <ul>
+                <li><strong>Room:</strong> <span id="room"></span></li>
+                <li><strong>Mode:</strong> <span id="mode"></span></li>
+                <li><strong>Role:</strong> <span id="role"></span></li>
+            </ul>
+            <button id="quit-button" type="button">Quit Game</button>
+        </aside>
+        <main>
+            <ul>
+                <li id="code">
+                    <svg height="50" width="300">
+                        <circle id="code-1" cx="90" cy="25" r="20" stroke="black" stroke-width="3" fill="white"></circle>
+                        <circle id="code-2" cx="150" cy="25" r="20" stroke="black" stroke-width="3" fill="white"></circle>
+                        <circle id="code-3" cx="210" cy="25" r="20" stroke="black" stroke-width="3" fill="white"></circle>
+                        <circle id="code-4" cx="270" cy="25" r="20" stroke="black" stroke-width="3" fill="white"></circle>
+                    </svg> 
+                </li>
+                <!-- The guessing rows will be added dynamically by js an example is below-->
+                <!--
+                <li id="1">
+                    <svg height="50" width="400">
+                        <text id="1-text" font-size="30px" x="25" y="34">1</text>
+                        <circle cx="90" cy="25" r="20" stroke="black" stroke-width="3" fill="white"></circle>
+                        <circle cx="150" cy="25" r="20" stroke="black" stroke-width="3" fill="white"></circle>
+                        <circle cx="210" cy="25" r="20" stroke="black" stroke-width="3" fill="white"></circle>
+                        <circle cx="270" cy="25" r="20" stroke="black" stroke-width="3" fill="white"></circle>
+                        <rect x="335" y="8" width="40" height="30" stroke-width="2" stroke="black" fill="white"/>
+                        <circle id="1-1e" cx="345" cy="16" r="5" stroke="black" stroke-width="1" fill="white"></circle>
+                        <circle id="1-2e" cx="365" cy="16" r="5" stroke="black" stroke-width="1" fill="white"></circle>
+                        <circle id="1-3e" cx="345" cy="30" r="5" stroke="black" stroke-width="1" fill="white"></circle>
+                        <circle id="1-4e" cx="365" cy="30" r="5" stroke="black" stroke-width="1" fill="white"></circle>
+                    </svg> 
+                </li>
+                -->
+            </ul>
+        </main>
+        <aside>
+            <section id="game-state">
+                <p>Time: <span id="time"></span></p>
+                <p>Game State</p>
+                <p id="state"> <strong>GAME STATE</strong> </p>
+            </section>
+            <section id="evaluate">
+                <p>How good is the guess?</p>
+                <p class="muted">Red for correct color & place</p>
+                <p class="muted">Yellow for correct color only</p>
+                <label>Red: </label>
+                <input type="text" id="red-evaluate" name="red"><br><br>
+                <label>Yellow: </label>
+                <input type="text" id="yellow-evaluate" name="yellow"><br><br>
+                <button type="button" id="evaluation-submit">Submit</button>
+            </section>
+            <!-- The sections color-selection or evaluation will be hidden according to the player -->
+            <section id="color-selection">
+                <p>Please click on the image you want to pick</p>
+                <svg height="100" width="230">
+                    <circle id="red" cx="25" cy="25" r="20" stroke="black" stroke-width="3" fill="#FF0000"></circle>
+                    <circle id="green" cx="85" cy="25" r="20" stroke="black" stroke-width="3" fill="#00FF00"></circle>
+                    <circle id="blue" cx="145" cy="25" r="20" stroke="black" stroke-width="3" fill="#0000FF"></circle>
+                    <circle id="yellow" cx="205" cy="25" r="20" stroke="black" stroke-width="3" fill="#FFFF00"></circle>
+
+                    <circle id="purple" cx="25" cy="75" r="20" stroke="black" stroke-width="3" fill="#D000FF"></circle>
+                    <circle id="orange" cx="85" cy="75" r="20" stroke="black" stroke-width="3" fill="#FF9100"></circle>
+                    <circle id="cyan" cx="145" cy="75" r="20" stroke="black" stroke-width="3" fill="#00FFEE"></circle>
+                    <circle id="brown" cx="205" cy="75" r="20" stroke="black" stroke-width="3" fill="#4A2E0A"></circle>
+                </svg> 
+            </section>
+            <section>
+                <button class="circle-button">Play</button>
+                <button class="circle-button">Reset</button>
+            </section>
+        </aside>
+    </body>
+</html>

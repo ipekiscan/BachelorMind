@@ -1,0 +1,98 @@
+@import "style.css";
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  height: 100%;
+  positon: absolute;
+} 
+
+aside section{
+  margin: 30px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+}
+
+main ul{
+  margin-left: auto;
+  margin-right: auto;
+  width: 440px;
+}
+
+/* to delete the . at the beginning of the row */
+ul li{
+  list-style-type: none;
+}
+
+section p{
+  text-align: center;
+}
+
+aside {
+  position: relative;
+}
+
+#color-selection svg{
+  margin-left: auto;
+  margin-right: auto;
+  width: 230px;
+  /* The margins are not effective in inline elements,
+  so we change it to block */
+  display: block;
+}
+
+button{
+  position: absolute;
+  right:    30%;
+  bottom:   0;
+  margin-bottom: 10px;
+  /* The radius of the curvature is 12 pixels */
+  border-radius: 12px;
+  padding: 10px 15px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+p{
+  color: white;
+  font-size: 1.4em;
+}
+
+section ul li{
+  color: white;
+  font-size: 1.3em;
+}
+
+label{
+  color: white;
+  font-size: 1.3em;
+}
+
+body{
+  background-image: url("/img/library_inside_blur.jpg");
+  background-size: cover;
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 75%;
+}
+
+h1{
+  font-size: 4.5em;
+}
+
+html{
+  height: 100%;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>BachelorMind</title>
+    </head>
+    <body>
+        <aside>
+            <p><strong>Number of games played:</strong> <span id="games-played"></span></p>
+            <p><strong>Number of ongoing games:</strong> <span id="games-ongoing"></span></p>
+        </aside>
+        <header>
+            <h1><em>BACHELORMIND</em></h1>
+            <p>Hack into your opponent's mind...</p>
+        </header>
+        <main>
+            <section>
+                <form action="/join-room" method="post" id="join-room"> 
+                    <input type="text" name="room-name"/>
+                    <button type="submit">Join Game</button>
+                </form>
+            </section>
+            <br>
+            <p>OR</p>
+            <br>
+            <section>
+                <form action="/create-room" method="post" id="create-room"> 
+                    <label for="room-name">Room Name: </label>
+                    <input type="text" name="room-name"><br>
+                    <label for="difficulty">Difficulty: </label>
+                    <select name="difficulty">
+                        <option value="hard">Hard</option>
+                        <option value="normal">Normal</option>
+                        <option value="easy">Easy</option>
+                    </select>
+                    <br>
+                    <label for="role">Role: </label>
+                    <select name="role">
+                        <option value="maker">Code Maker</option>
+                        <option value="guesser">Code Guesser</option>
+                    </select>
+                    <br>
+                    <button type="submit">Create Game</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

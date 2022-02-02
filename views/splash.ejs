@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>BachelorMind</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                if(window.location.hash && window.location.hash != "#"){
+                    document.getElementById("error-msg").innerText = decodeURI(window.location.hash.substring(1));
+                }else{
+                    document.getElementById("error-msg").hidden = true;
+                }
+            });
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/splash.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1><em>BACHELORMIND</em></h1>
+                <p>Hack into your opponent's mind...</p>
+            </header>
+            <p id="error-msg"><p>
+            <section>
+                <form action="/join-room" method="post" id="join-room"> 
+                    <input required type="text" name="room-name"/>
+                    <button type="submit">Join Game</button>
+                </form>
+            </section>
+            <br>
+            <p><strong>OR</strong></p>
+            <br>
+            <section>
+                <form action="/create-room" method="post" id="create-room"> 
+                    <label for="room-name">Room Name: </label>
+                    <input required type="text" name="room-name"><br>
+                    <label for="difficulty">Difficulty: </label>
+                    <select name="difficulty">
+                        <option value="hard">Hard</option>
+                        <option value="normal">Normal</option>
+                        <option value="easy">Easy</option>
+                    </select>
+                    <br>
+                    <label for="role">Role: </label>
+                    <select name="role">
+                        <option value="maker">Code Maker</option>
+                        <option value="guesser">Code Guesser</option>
+                    </select>
+                    <br>
+                    <button type="submit">Create Game</button>
+                </form>
+            </section>
+        </main>
+        <aside>
+            <p id="description">
+                The object of MASTERMIND (r) is to guess a secret code consisting of a
+                series of 4 colored pegs. Each guest results in feedback narrowing down the
+                possibilities of the code. The winner is the player who solves his
+                opponent's secret code with fewer guesses. For more information on the game,
+                you can check out its <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)">wikipedia article</a>.
+            </p>
+            <section id="stats">
+                <p><strong>Number of games played:</strong> <%= played %></p>
+                <p><strong>Number of completed games:</strong> <%= completed %></p>
+                <p><strong>Number of ongoing games:</strong> <%= ongoing %></p>
+            </section>
+            <div id="code">
+                <span class="code-hole" id="code-1"></span>
+                <span class="code-hole" id="code-2"></span>
+                <span class="code-hole" id="code-3"></span>
+                <span class="code-hole" id="code-4"></span>
+            </div>
+        </aside>
+    </body>
+</html>
